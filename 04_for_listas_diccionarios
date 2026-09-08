@@ -1,0 +1,155 @@
+# contador = 1 
+
+# while contador <= 5:
+#     print(contador)
+#     contador += 1
+
+# for numero in range(1, 6):
+#     print(numero)
+
+# range(): El final no se incluye el final
+
+# for numero in range(2, 7):
+#     print(numero)
+# se lee de 2 hasta antes del 7 
+
+#range(5)
+#0,1,2,3,4
+#en caso de estar asi de un solo numero empieza en 0 y no toma el numero 
+
+# range(1,6)
+#1,2,3,4,5 inicio y fin , fin no incluido
+
+# range(0,11,2)
+#0,2,4,6,8,10 
+
+# total=0
+# for vuelta in range(4):
+#     numero=int(input("numero: "))
+#     total= total+ numero
+# prin("total: ", total)
+
+# for numeri in range(1,11):
+#     if numero % 2==0:
+#         print(numero,"es par")
+#     else
+#         print(numero,"es inpar")
+
+# contador = 0
+# suma = 0
+# for numero in range(1,11):
+#     if numero% == 0:
+#         contador += 1
+#         suma += numero
+# print("cantidad de pares: ", contador)
+# print("suma de pares: ", suma)
+# contador=5 y su suma = 30 (numeros pares encontrados 2,4,6,8,10)
+
+
+# for numero in range(1, 8):
+#     if numero == 4:
+#         break
+#     print(numero)
+
+#1,2,3
+
+
+# texto = "hola"
+# for letra in texto:
+#     print("letra: ", letra)
+
+# va hacer cuatro iteraciones una por cada caracter
+
+# texto= "AREA TECNICA"
+# texto= texto.lower()
+# if texto in "aeiouáéíóú":
+
+# texto = "python"
+# len(texto)  #6   len es para cotaar el numero de caracteres que tienen la palabra
+# texto[0]    #p
+# texto[-1]   #n
+# texto[0:3]  #pyt
+# texto[::-1] #nohtyP
+
+# texto="python"
+# len(texto)
+# print(texto[0])
+
+# notas = [4.5,3.8,5.0,2.9]
+# print(notas[0])
+# print(notas[-1])
+# print(len(notas))
+
+# notas = [4.5,3.0,5.0]
+# for nota in notas:
+#     print("nota:", nota)
+
+#     suma= 0
+#     for nota in notas:
+#         suma += nota
+#     promedio = suma/len(notas)
+# print (promedio)
+
+
+# notas= []
+# for vuelta in range(3):
+#     nota= float(input("ingrese la nota: "))
+#     notas.append(nota)
+# print(notas)
+
+
+# podemos modificar y eliminar elementos de una lista
+
+# frutas=["manzana","pera","uva","uva"]
+# frutas[1]="mango"
+
+# frutas.remove("mango")
+# eliminada=frutas.pop(3)
+# print (frutas)
+
+#HERRAMIENTAS UTILES DE LISTAS
+# numeros= [30,10,40,20]
+# numeros.sort()            #modifica la lista
+# ordenada= sorted(numeros) #crea otra lista
+# numeros.reverse()           #invierte el orden actual
+# post=numeros.count(30)      #cuenta coincidencias  (para esta se debe ponerle nombre a la variable para poder ejecutar esta herramientaa al igual que donde index)
+# post=numeros.index(40)      #primera posicion donde aparece
+# print (post)
+
+# nombres=["ana","luis","carlos",]
+# for i in range(len(nombres)):               #la i funciona com o un contador
+#     print("estudiante",i+1,":", nombres[i])
+
+#FUNCIONA PARA MODIFICAR ALGUN VALOR DE LA LISTA
+
+# notas=[2.5,3.0,4.0]
+# for i in range(len(notas)):
+#     if notas[i]< 3.0:
+#         notas[i]= 3.0
+# print(notas)
+
+# LISTAS ANIDADA LISTA DENTRO DE LISTAS
+
+# estudiantes=[
+#     ["ana",4.5],
+#     ["luis",3.8],
+#     ["carlos",4.2]
+# ]
+# print(estudiantes[0][0])
+
+# for estudiante in estudiantes:
+#     print(estudiante[0], estudiante[1])
+
+
+# promedio usadondo listas anidadas
+
+estudiantes =[
+    ["ana", [4.0,3.5,5.0]],
+    ["luis", [2.8,3.0,4.2]]
+]
+for estudiante in estudiantes:
+    suma=0
+    for nota in estudiante[1]:
+        suma+=nota
+    promedio=suma/len(estudiante[1])
+    print(estudiante[0],round(promedio,2))
